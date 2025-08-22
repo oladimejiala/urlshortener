@@ -50,7 +50,7 @@ export async function apiRequest(
     const urlData = {
       id,
       shortCode,
-      shortUrl: `tiinyurl.com/${shortCode}`,
+      shortUrl: `urlshortener0.com/${shortCode}`,
       originalUrl,
       clickCount: 0,
       createdAt: new Date().toISOString(),

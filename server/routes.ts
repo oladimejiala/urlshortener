@@ -1,6 +1,6 @@
 import type { Express } from "express";
 import { createServer, type Server } from "http";
-import { storage } from "./storage";
+import { storage } from "./storage-neon";
 import { insertUrlSchema, insertClickSchema } from "@shared/schema";
 import { generateShortCode } from "../client/src/lib/base62";
 
