@@ -22,7 +22,7 @@ Mobile-responsive design (use CSS Flexbox/Grid + media queries).
 
 Customization (Optional):
 
-Allow users to customize the alias (e.g., tiinyurl.com/mysite).
+Allow users to customize the alias (e.g., urlshortener1.com/mysite).
 
 Real-time validation to check alias availability.
 

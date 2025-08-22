@@ -144,7 +144,7 @@ export default function Pricing() {
             <div>
               <div className="flex items-center mb-4">
                 <Link className="text-blue-500 text-xl mr-2" />
-                <span className="font-bold text-gray-900">TiinyURL</span>
+                <span className="font-bold text-gray-900">Url Shortener</span>
               </div>
               <p className="text-gray-600 text-sm">The simple, fast, and reliable URL shortener.</p>
             </div>
@@ -174,7 +174,7 @@ export default function Pricing() {
             </div>
           </div>
           <div className="border-t border-gray-200 mt-8 pt-6 text-center">
-            <p className="text-gray-500 text-sm">&copy; 2025 TiinyURL. All rights reserved.</p>
+            <p className="text-gray-500 text-sm">&copy; 2025 Url Shortener. All rights reserved.</p>
           </div>
         </div>
       </footer>

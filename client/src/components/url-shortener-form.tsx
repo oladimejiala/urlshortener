@@ -107,10 +107,10 @@ export function UrlShortenerForm({ onUrlShortened }: UrlShortenerFormProps) {
                   <FormLabel className="text-sm font-semibold text-gray-700">Custom alias (optional)</FormLabel>
                   <FormControl>
                     <div className="relative">
-                      <span className="absolute left-3 top-3 text-gray-500 text-sm">shorturl.com/  </span>
+                      <span className="absolute left-3 top-3 text-gray-500 text-sm">urlshortener0.com/  </span>
                       <Input
                         {...field}
-                        placeholder="link"
+                        placeholder="enter your prefered link here"
                         className="w-full pl-28 pr-4 py-3"
                         data-testid="input-custom-alias"
                         onChange={(e) => {

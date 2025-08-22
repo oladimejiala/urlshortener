@@ -13,7 +13,7 @@ export function AnalyticsDashboard() {
 
   const copyToClipboard = async (shortUrl: string) => {
     try {
-      await navigator.clipboard.writeText(`https://urlshortener1.com/${shortUrl}`);
+      await navigator.clipboard.writeText(`https://urlshortener0.com/${shortUrl}`);
       toast({
         title: "Success",
         description: "URL copied to clipboard!",
