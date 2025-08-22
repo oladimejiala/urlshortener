@@ -84,7 +84,7 @@ export function UrlShortenerForm({ onUrlShortened }: UrlShortenerFormProps) {
                     <Input
                       {...field}
                       type="url"
-                      placeholder="https://example.com/very-long-url-that-needs-shortening"
+                      placeholder="Enter your URL that needs shortening here"
                       className="w-full px-4 py-3 pr-12 text-lg"
                       data-testid="input-long-url"
                     />
@@ -107,7 +107,7 @@ export function UrlShortenerForm({ onUrlShortened }: UrlShortenerFormProps) {
                   <FormLabel className="text-sm font-semibold text-gray-700">Custom alias (optional)</FormLabel>
                   <FormControl>
                     <div className="relative">
-                      <span className="absolute left-3 top-3 text-gray-500 text-sm">tiinyurl.com/</span>
+                      <span className="absolute left-3 top-3 text-gray-500 text-sm">urlshortener1.com/</span>
                       <Input
                         {...field}
                         placeholder="my-link"

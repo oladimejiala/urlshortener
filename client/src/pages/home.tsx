@@ -20,7 +20,7 @@ export default function Home() {
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
               <Link className="text-blue-500 text-2xl mr-3" />
-              <h1 className="text-2xl font-bold text-gray-900">TiinyURL</h1>
+              <h1 className="text-2xl font-bold text-gray-900">Url Shortener</h1>
             </div>
             <nav className="hidden md:flex space-x-6">
               <a href="/" className="text-blue-500 hover:text-blue-600 font-medium">Home</a>
