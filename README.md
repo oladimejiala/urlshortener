@@ -1,6 +1,6 @@
 # Overview
 
-TiinyURL is a modern URL shortening web application built with a full-stack architecture. It provides users with the ability to create short, memorable links from long URLs with optional customization and basic analytics tracking. The application features a clean, responsive single-page interface with real-time feedback and QR code generation for shortened URLs.
+UrlShortener is a modern URL shortening web application built with a full-stack architecture. It provides users with the ability to create short, memorable links from long URLs with optional customization and basic analytics tracking. The application features a clean, responsive single-page interface with real-time feedback and QR code generation for shortened URLs.
 
 # User Preferences
 
