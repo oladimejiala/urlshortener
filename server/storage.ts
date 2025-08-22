@@ -50,7 +50,7 @@ export class MemStorage implements IStorage {
     return {
       id: url.id,
       shortCode: url.shortCode,
-      shortUrl: `tiinyurl.com/${url.customAlias || url.shortCode}`,
+      shortUrl: `urlshortener1.com/${url.customAlias || url.shortCode}`,
       originalUrl: url.originalUrl,
       clickCount: url.clickCount,
       createdAt: url.createdAt.toISOString(),
