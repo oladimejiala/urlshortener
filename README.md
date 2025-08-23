@@ -4,8 +4,7 @@ UrlShortener is a modern URL shortening web application built with a full-stack 
 
 # User Preferences
 
-Preferred communication style: Simple, everyday language.
-
+Preferred communication style: Simple, everyday l
 # System Architecture
 
 ## Frontend Architecture

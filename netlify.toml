@@ -1,10 +1,14 @@
 [build]
-  command = "npm run build"
+  # Explicitly install devDependencies then run the build so build tools
+  # like `vite` and `esbuild` are available during CI.
+  command = "npm ci --include=dev && npm run build"
   publish = "dist/public"
   functions = "dist"
 
 [build.environment]
   NODE_ENV = "production"
+  # Ensure Netlify installs devDependencies (vite, esbuild, build tooling)
+  NPM_FLAGS = "--include=dev"
 
 [[redirects]]
   from = "/api/*"
