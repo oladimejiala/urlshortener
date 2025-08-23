@@ -50,7 +50,7 @@ export async function apiRequest(
     const urlData = {
       id,
       shortCode,
-      shortUrl: `tiinyurl.com/${shortCode}`,
+      shortUrl: `lnkzip.com/${shortCode}`,
       originalUrl,
       clickCount: 0,
       createdAt: new Date().toISOString(),
@@ -79,6 +79,7 @@ export async function apiRequest(
 }
 
 type UnauthorizedBehavior = "returnNull" | "throw";
+
 export const getQueryFn: <T>(options: {
   on401: UnauthorizedBehavior;
 }) => QueryFunction<T> =
@@ -86,10 +87,11 @@ export const getQueryFn: <T>(options: {
   async ({ queryKey }) => {
     // Mock response for alias check when backend is not available
     if (queryKey[0] === "/api/urls" && queryKey[1] === "check-alias") {
-      const alias = queryKey[2];
-      if (!alias || alias.length === 0) {
-        return { available: false };
-      }
+      const alias = queryKey[2] as string | undefined;
+if (!alias || alias.length === 0) {
+  return { available: false };
+}
+
       
       // Check if alias is already in use
       const isUsed = Array.from(mockUrlStorage.values()).some(url => url.shortCode === alias);

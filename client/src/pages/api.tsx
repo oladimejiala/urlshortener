@@ -1,4 +1,4 @@
-import { Link } from "lucide-react";
+import { LinkIcon } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export default function ApiPage() {
@@ -8,8 +8,8 @@ export default function ApiPage() {
       <header className="bg-white shadow-sm border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            <div className="flex items-center">
-              <Link className="text-blue-500 text-2xl mr-3" />
+        <div className="flex items-center">
+              <LinkIcon className="text-blue-500 text-2xl mr-3" />
               <h1 className="text-2xl font-bold text-gray-900">Url Shortener</h1>
             </div>
             <nav className="hidden md:flex space-x-6">
