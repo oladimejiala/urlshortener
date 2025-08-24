@@ -50,11 +50,7 @@ export async function apiRequest(
     const urlData = {
       id,
       shortCode,
-<<<<<<< HEAD
       shortUrl: `lnkzip.com/${shortCode}`,
-=======
-      shortUrl: `urlshortener0.com/${shortCode}`,
->>>>>>> 23cbde93f546e97a091c45684f2af4d87932cfd1
       originalUrl,
       clickCount: 0,
       createdAt: new Date().toISOString(),

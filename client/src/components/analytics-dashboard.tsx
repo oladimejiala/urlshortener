@@ -127,7 +127,7 @@ export function AnalyticsDashboard() {
                 >
                   <td className="py-3 px-4">
                     <span className="text-blue-600 font-mono text-sm">
-                      urlshortener0.com/{url.customAlias || url.shortCode}
+                      lnkzip.com/{url.customAlias || url.shortCode}
                     </span>
                   </td>
                   <td className="py-3 px-4">
