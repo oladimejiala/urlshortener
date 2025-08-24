@@ -1,0 +1,25 @@
+[build]
+  # Explicitly install devDependencies then run the build so build tools
+  # like `vite` and `esbuild` are available during CI.
+  command = "npm ci --include=dev && npm run build"
+  publish = "dist/public"
+  functions = "dist"
+
+[build.environment]
+  NODE_ENV = "production"
+  # Ensure Netlify installs devDependencies (vite, esbuild, build tooling)
+  NPM_FLAGS = "--include=dev"
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/index"
+  status = 200
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[functions]
+  directory = "dist"
+  node_bundler = "esbuild"

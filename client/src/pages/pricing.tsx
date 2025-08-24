@@ -118,7 +118,7 @@ export default function Pricing() {
           <h3 className="text-2xl font-bold text-gray-900 mb-8">Frequently Asked Questions</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
             <div>
-              <h4 className="font-semibold text-gray-900 mb-2">Can I use TiinyURL for free forever?</h4>
+              <h4 className="font-semibold text-gray-900 mb-2">Can I use Url Shortener for free forever?</h4>
               <p className="text-gray-600 text-sm">Yes! Our free plan includes unlimited URL shortening with basic features. You'll see ads to help support the service.</p>
             </div>
             <div>
