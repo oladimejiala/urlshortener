@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Check, X, Zap, Shield, BarChart3, Link } from "lucide-react";
+import { Check, X, Zap, Shield, BarChart3, Link as LucideLink } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function Pricing() {
   return (
@@ -10,14 +11,14 @@ export default function Pricing() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
-              <Link className="text-blue-500 text-2xl mr-3" />
+              <LucideLink className="text-blue-500 text-2xl mr-3" />
               <h1 className="text-2xl font-bold text-gray-900">Url Shortener</h1>
             </div>
             <nav className="hidden md:flex space-x-6">
               <a href="/" className="text-gray-600 hover:text-gray-900 font-medium">Home</a>
               <a href="#analytics" className="text-gray-600 hover:text-gray-900 font-medium">Analytics</a>
               <a href="/pricing" className="text-blue-500 hover:text-blue-600 font-medium">Pricing</a>
-              <a href="/api" className="text-gray-600 hover:text-gray-900 font-medium">API</a>
+              <Link to="/api" className="text-gray-600 hover:text-gray-900 font-medium">API</Link>
             </nav>
           </div>
         </div>
@@ -143,7 +144,7 @@ export default function Pricing() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
               <div className="flex items-center mb-4">
-                <Link className="text-blue-500 text-xl mr-2" />
+                <LucideLink className="text-blue-500 text-xl mr-2" />
                 <span className="font-bold text-gray-900">Url Shortener</span>
               </div>
               <p className="text-gray-600 text-sm">The simple, fast, and reliable URL shortener.</p>
@@ -153,7 +154,7 @@ export default function Pricing() {
               <ul className="space-y-2 text-sm text-gray-600">
                 <li><a href="/" className="hover:text-gray-900">Features</a></li>
                 <li><a href="/pricing" className="hover:text-gray-900">Pricing</a></li>
-                <li><a href="/api" className="hover:text-gray-900">API</a></li>
+                <li><Link to="/api" className="hover:text-gray-900">API</Link></li>
               </ul>
             </div>
             <div>
