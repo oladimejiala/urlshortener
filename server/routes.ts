@@ -77,6 +77,29 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+  // Direct short URL redirect (for browser navigation)
+  app.get("/r/:shortCode", async (req, res) => {
+    try {
+      const { shortCode } = req.params;
+      const url = await storage.getUrlByShortCode(shortCode);
+      
+      if (!url || !url.isActive) {
+        return res.status(404).send("Not Found");
+      }
+      
+      // Optionally record click here
+      await storage.recordClick({
+        urlId: url.id,
+        userAgent: req.headers["user-agent"] || null,
+        ipAddress: req.ip || null,
+      });
+      
+      res.redirect(url.originalUrl);
+    } catch (error: any) {
+      res.status(500).send("Server error");
+    }
+  });
+
   // Delete URL
   app.delete("/api/urls/:id", async (req, res) => {
     try {

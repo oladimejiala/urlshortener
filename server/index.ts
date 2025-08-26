@@ -2,6 +2,7 @@ import "dotenv/config";
 import express, { type Request, Response, NextFunction } from "express";
 import { registerRoutes } from "./routes";
 import { setupVite, serveStatic, log } from "./vite";
+import { storage } from "./storage-neon";
 
 const app = express();
 app.use(express.json());
@@ -38,6 +39,26 @@ app.use((req, res, next) => {
 });
 
 (async () => {
+  // Direct short URL redirect (for browser navigation)
+  app.get("/r/:shortCode", async (req, res) => {
+    try {
+      const { shortCode } = req.params;
+      const url = await storage.getUrlByShortCode(shortCode);
+      if (!url || !url.isActive) {
+        return res.status(404).send("Not Found");
+      }
+      // Optionally record click here
+      await storage.recordClick({
+        urlId: url.id,
+        userAgent: req.headers["user-agent"] || null,
+        ipAddress: req.ip || null,
+      });
+      res.redirect(url.originalUrl);
+    } catch (error: any) {
+      res.status(500).send("Server error");
+    }
+  });
+
   const server = await registerRoutes(app);
 
   app.use((err: any, _req: Request, res: Response, _next: NextFunction) => {
