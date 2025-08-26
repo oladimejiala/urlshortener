@@ -21,7 +21,7 @@ export default function Home() {
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
               <LucideLink className="text-blue-500 text-2xl mr-3" />
-              <h1 className="text-2xl font-bold text-gray-900">Url Shortener</h1>
+              <h1 className="text-2xl font-bold text-gray-900">LnkZip</h1>
             </div>
             <nav className="hidden md:flex space-x-6">
               <a href="/" className="text-blue-500 hover:text-blue-600 font-medium">Home</a>
@@ -47,8 +47,9 @@ export default function Home() {
       <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Hero Section */}
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Shorten Your URLs Instantly</h2>
-          <p className="text-xl text-gray-600 mb-8">Create short, memorable links and track their performance with detailed analytics.</p>
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">Free URL Shortener with Custom Links & QR Codes</h2>
+          <p className="text-xl text-gray-600 mb-8"> Shorten your URLs instantly — no sign up required. Create branded links, track clicks, 
+    and generate free QR codes with Lnkzip’s powerful custom URL shortener</p>
         </div>
 
         {/* URL Shortener Form */}
@@ -82,7 +83,7 @@ export default function Home() {
             <div>
               <div className="flex items-center mb-4">
                 <LucideLink className="text-blue-500 text-xl mr-2" />
-                <span className="font-bold text-gray-900">Url Shortener</span>
+                <span className="font-bold text-gray-900">LnkZip</span>
               </div>
               <p className="text-gray-600 text-sm">The simple, fast, and reliable URL shortener.</p>
             </div>
@@ -112,7 +113,7 @@ export default function Home() {
             </div>
           </div>
           <div className="border-t border-gray-200 mt-8 pt-6 text-center">
-            <p className="text-gray-500 text-sm">&copy; 2025 UrlShortener. All rights reserved.</p>
+            <p className="text-gray-500 text-sm">&copy; 2025 LnkZip - Url Shortener. All rights reserved.</p>
           </div>
         </div>
       </footer>
