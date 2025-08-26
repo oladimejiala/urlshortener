@@ -26,27 +26,3 @@ CREATE INDEX IF NOT EXISTS idx_urls_custom_alias ON urls(custom_alias);
 CREATE INDEX IF NOT EXISTS idx_clicks_url_id ON clicks(url_id);
 CREATE INDEX IF NOT EXISTS idx_clicks_timestamp ON clicks(timestamp);
 -- Insert sample data (optional)
-INSERT INTO urls (
-        original_url,
-        short_code,
-        custom_alias,
-        click_count,
-        is_active,
-        created_at
-    )
-VALUES (
-        'https://example.com',
-        'abc123',
-        'example',
-        0,
-        true,
-        NOW()
-    ),
-    (
-        'https://github.com',
-        'def456',
-        'github',
-        0,
-        true,
-        NOW()
-    ) ON CONFLICT (short_code) DO NOTHING;
