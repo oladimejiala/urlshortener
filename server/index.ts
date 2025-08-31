@@ -44,10 +44,14 @@ app.use((req, res, next) => {
     const { shortCode } = req.params;
     // Ignore requests for static files or known frontend routes
     if (["api", "pricing", "contact", "help", "status", "privacy", "terms", "security"].includes(shortCode)) {
+      console.log(`[REDIRECT] Ignored reserved route: ${shortCode}`);
       return res.status(404).send("Not Found");
     }
+    console.log(`[REDIRECT] Looking up shortCode: ${shortCode}`);
     const url = await storage.getUrlByShortCode(shortCode);
+    console.log(`[REDIRECT] Lookup result for ${shortCode}:`, url);
     if (!url || !url.isActive) {
+      console.log(`[REDIRECT] Not found or inactive: ${shortCode}`);
       return res.status(404).send("Not Found");
     }
     await storage.recordClick({
@@ -55,6 +59,7 @@ app.use((req, res, next) => {
       userAgent: req.headers["user-agent"] || null,
       ipAddress: req.ip || null,
     });
+    console.log(`[REDIRECT] Redirecting to: ${url.originalUrl}`);
     res.redirect(url.originalUrl);
   });
 
