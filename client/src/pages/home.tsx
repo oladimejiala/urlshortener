@@ -98,7 +98,7 @@ export default function Home() {
             <div>
               <h4 className="font-semibold text-gray-900 mb-3">Support</h4>
               <ul className="space-y-2 text-sm text-gray-600">
-                <li><a href="/help" className="hover:text-gray-900">Help Center</a></li>
+                <li><a href="mailto:amtechbenin+support@gmail.com" className="hover:text-gray-900">Help Center</a></li>
                 <li><a href="/contact" className="hover:text-gray-900">Contact</a></li>
                 <li><a href="/status" className="hover:text-gray-900">Status</a></li>
               </ul>
