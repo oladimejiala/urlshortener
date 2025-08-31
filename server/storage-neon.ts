@@ -17,7 +17,7 @@ export class NeonStorage {
     return {
       id: url.id,
       shortCode: url.shortCode,
-      shortUrl: `urlshortener0.com/${url.customAlias || url.shortCode}`,
+      shortUrl: `lnkzip.com/${url.customAlias || url.shortCode}`,
       originalUrl: url.originalUrl,
       clickCount: url.clickCount,
       createdAt: url.createdAt.toISOString(),
