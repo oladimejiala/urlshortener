@@ -28,7 +28,7 @@ DATABASE_URL=your_actual_database_url
 ### 4. Deploy
 1. Click "Deploy site"
 2. Wait for build to complete
-3. Your site will be available at `urlshortener0.netlify.app`
+3. Your site will be available at `lnkzip.netlify.app`
 
 ## Custom Domain Setup
 1. Go to Site settings → Domain management
